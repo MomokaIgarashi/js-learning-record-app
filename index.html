@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Learning Record App</title>
+    <link rel="stylesheet" href="./src/css/style.css">
+</head>
+<body>
+    <div class="index--input">
+        <h1>My Learning Record App</h1>
+        <form>
+            <select name="category" multiple="multiple">
+                <option value="category">Category</option>
+                <option value="html-css">HTML&CSS</option>
+                <option value="javascript">JavaScript</option>
+                <option value="react">React</option>
+                <option value="db">DB</option>
+                <option value="api">API</option>
+            </select>
+            <input type="text" placeholder="What did you learn?">
+            <input type="text" placeholder="Time(h)">
+            <input type="submit" value="Add">
+        </form>
+    </div>
+    <div class="index--category">
+        <div class="index--category--list">
+            <p class="index--category--list__title">JavaScript</p>
+            <p class="index--category--list__time">20h</p>
+        </div>
+    </div>
+    <div class="index--history">
+        <div class="index--history--item">
+            <p class="index--history--item__date">7 / 10</p>
+            <p class="index--history--item__category">Category: JavaScript</p>
+            <p class="index--history--item__detail">Udemy course learning</p>
+            <p class="index--history--item__time">1h</p>
+        </div>
+    </div>
+</body>
+</html>
