@@ -4,25 +4,24 @@ const toDoParent = document.querySelector('.todos');
 
 let toDoArray = [];
 
-//配列要素
 addForm.addEventListener("submit", e => {
     e.preventDefault();
     toDoArray.push(addInput.value);
     toDoParent.innerHTML = "";
-
+    
     toDoArray.forEach( ToDo => {
-     
         const toDoEl = document.createElement('li');   
         toDoEl.classList.add("todos--list");
         toDoEl.textContent = ToDo;
         toDoParent.appendChild(toDoEl);
+        
+        const deleteBtn = document.createElement('button');
+        deleteBtn.textContent = "Delete";
+        deleteBtn.addEventListener("click", () => {
+            toDoEl.remove();
+        });
+        toDoEl.appendChild(deleteBtn);
     });
+    
     addInput.value = "";
-})
-
-// addForm.addEventListener("submit", e => {
-//     e.preventDefault();
-//     toDoArray.push(addInput.value);
-//     console.log(toDoArray);
-//     toDoParent.textContent(toDoArray);
-// })
+});
