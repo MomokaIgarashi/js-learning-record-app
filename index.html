@@ -5,11 +5,17 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Learning Record App</title>
     <link rel="stylesheet" href="./src/css/style.css">
+    <script src="./src/js/index.js" type='module' defer></script>
 </head>
 <body>
     <div class="index--input">
         <h1>My Learning Record App</h1>
-        <form>
+        <form class="td-add-form" name="addFormName">
+            <input type="text" name="addInputText" class="td-add-input" placeholder='Add...'>
+            <input type="submit" class="td-add-button" value="Add" />
+        </form>
+
+        <!-- <form>
             <select name="category" multiple="multiple">
                 <option value="category">Category</option>
                 <option value="html-css">HTML&CSS</option>
@@ -21,7 +27,7 @@
             <input type="text" placeholder="What did you learn?">
             <input type="text" placeholder="Time(h)">
             <input type="submit" value="Add">
-        </form>
+        </form> -->
     </div>
     <div class="index--category">
         <div class="index--category--list">
@@ -30,12 +36,17 @@
         </div>
     </div>
     <div class="index--history">
-        <div class="index--history--item">
+        <!-- <div class="index--history--item">
             <p class="index--history--item__date">7 / 10</p>
             <p class="index--history--item__category">Category: JavaScript</p>
             <p class="index--history--item__detail">Udemy course learning</p>
             <p class="index--history--item__time">1h</p>
-        </div>
+        </div> -->
+
+        <h2>Learning History</h2>
+        <ul class="todos">
+            <!-- to_do list -->
+        </ul>
     </div>
 </body>
 </html>
